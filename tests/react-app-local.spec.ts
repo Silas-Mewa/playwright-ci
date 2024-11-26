@@ -4,7 +4,7 @@ import { beforeEach, describe } from 'node:test';
 describe("local tests", (page) => {
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://127.0.0.1:5173/');
+    await page.goto('http://localhost:5173/');
   })
   
   test('has title', async ({ page }) => {
@@ -27,7 +27,7 @@ describe("local tests", (page) => {
 
   
   test('can access swagger', async ({ page }) => {
-    await page.goto('http://127.0.0.1:8080/swagger-ui/index.html');
+    await page.goto('http://localhost:8080/swagger-ui/index.html');
     await expect(page.getByRole('heading', { name: 'OpenAPI definition v0 OAS' })).toContainText('OpenAPI definition')
   });
   
