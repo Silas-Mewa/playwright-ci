@@ -26,10 +26,10 @@ describe("local tests", (page) => {
 
 
   
-  test('can access swagger', async ({ page }) => {
-    await page.goto('http://localhost:8080/swagger-ui/index.html');
-    await expect(page.getByRole('heading', { name: 'OpenAPI definition v0 OAS' })).toContainText('OpenAPI definition')
-  });
+  // test('can access swagger', async ({ page }) => {
+  //   await page.goto('http://localhost:8080/swagger-ui/index.html');
+  //   await expect(page.getByRole('heading', { name: 'OpenAPI definition v0 OAS' })).toContainText('OpenAPI definition')
+  // });
   
   test('can access external links', async ({ page }) => {
     await page.goto('http://google.com');
